@@ -6,7 +6,6 @@ export default function Index() {
     <View style={styles.container}>
       <Text style={styles.welcome}>Welcome to My App</Text>
       <TouchableOpacity style={styles.button} onPress={() => router.push('/signup')}>
-      <Stack.Screen name="UserProfile" component={UserProfileScreen} />
         <Text style={styles.buttonText}>Create Account</Text>
       </TouchableOpacity>
       <TouchableOpacity style={[styles.button, styles.secondaryButton]} onPress={() => router.push('/signin')}>
