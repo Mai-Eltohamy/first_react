@@ -1,17 +1,19 @@
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { router } from 'expo-router';
-
+import UserProfileScreen from './src/screens/UserProfileScreen';
 export default function Index() {
   return (
     <View style={styles.container}>
       <Text style={styles.welcome}>Welcome to My App</Text>
       <TouchableOpacity style={styles.button} onPress={() => router.push('/signup')}>
+      <Stack.Screen name="UserProfile" component={UserProfileScreen} />
         <Text style={styles.buttonText}>Create Account</Text>
       </TouchableOpacity>
       <TouchableOpacity style={[styles.button, styles.secondaryButton]} onPress={() => router.push('/signin')}>
         <Text style={styles.secondaryButtonText}>Sign In</Text>
       </TouchableOpacity>
     </View>
+    
   );
 }
 
